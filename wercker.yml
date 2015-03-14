@@ -1,0 +1,13 @@
+box: astonish/astonish-wercker-box@0.2.12
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+    # A step that executes `npm test` command
+    - npm-test
+
+deploy:
+  steps:
+    - kwakayama/npm-publish@0.0.2
