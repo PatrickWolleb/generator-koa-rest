@@ -43,8 +43,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src')
       );
       this.fs.copy(
-        this.templatePath('src/api/root/root.controller.js'),
-        this.destinationPath('src/api/root/root.controller.js'), {
+        this.templatePath('src/resources/root/root.controller.js'),
+        this.destinationPath('src/resources/root/root.controller.js'), {
           process :  function (input) {
             var output = input.toString('utf-8')
                               .replace('{{API_NAME}}', apiName)

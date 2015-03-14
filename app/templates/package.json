@@ -27,6 +27,7 @@
     "local": "NODE_ENV=local nodemon --debug --harmony src/server.js",
     "test": "npm run test-jshint && npm run test-mocha",
     "test-mocha" : "NODE_ENV=test mocha --harmony ./src/**/*.spec.js",
-    "test-jshint" : "jshint -c .jshintrc src/**/*.js --exclude src/**/*.spec.js --reporter node_modules/jshint-stylish/stylish.js"
+    "test-jshint" : "jshint -c .jshintrc src/**/*.js --exclude src/**/*.spec.js --reporter node_modules/jshint-stylish/stylish.js",
+    "test-mocha-watch": "NODE_ENV=test mocha --watch --harmony ./src/**/*.spec.js"
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 
-exports.index = function*(req, res) {
+exports.index = function*(next) {
 	this.status = 200;
   this.body = [];
 };

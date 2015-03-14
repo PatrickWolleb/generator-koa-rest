@@ -35,14 +35,14 @@ describe('koa-rest:app', function () {
       'src/config/environment/development.js',
       'src/config/environment/test.js',
       'src/config/environment/production.js',
-      'src/api/root/index.js',
-      'src/api/root/root.controller.js',
-      'src/api/root/root.spec.js',
+      'src/resources/root/index.js',
+      'src/resources/root/root.controller.js',
+      'src/resources/root/root.spec.js',
     ]);
   });
 
   it('replaces {{API_NAME}} and {{API_PORTAL}} on root controller file with promped values', function () {
-      var rootController = fs.readFileSync(path.join(os.tmpdir(), './temp-test') + '/src/api/root/root.controller.js', 'utf-8');
+      var rootController = fs.readFileSync(path.join(os.tmpdir(), './temp-test') + '/src/resources/root/root.controller.js', 'utf-8');
       assert(rootController.indexOf('Test API TEST') !== -1, true);
       assert(rootController.indexOf('http://dev.api.com') !== -1, true);
   });

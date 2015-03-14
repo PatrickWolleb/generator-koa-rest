@@ -2,7 +2,7 @@
 
 
 // Get list of roots
-exports.index = function*(req, res) {
+exports.index = function*(next) {
 	this.status = 403;
   this.body = { 
   	name : '{{API_NAME}}', 

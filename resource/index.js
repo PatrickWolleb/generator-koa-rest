@@ -35,11 +35,11 @@ module.exports = yeoman.generators.Base.extend({
   writing: function () {
     var resourceName = this.arguments[0];
 
-    this.mkdir('src/api/' + resourceName);
+    this.mkdir('src/resources/' + resourceName);
     
     this.fs.copy(
       this.templatePath('_resource/index.js'),
-      this.destinationPath('src/api/' + resourceName + '/index.js'),{
+      this.destinationPath('src/resources/' + resourceName + '/index.js'),{
         process :  function (input) {
             var output = input.toString('utf-8')
                               .replace('{{RESOURCE_NAME}}', resourceName);           
@@ -50,13 +50,13 @@ module.exports = yeoman.generators.Base.extend({
 
     this.fs.copy(
       this.templatePath('_resource/controller.js'),
-      this.destinationPath('src/api/' + resourceName + '/' + resourceName + '.controller.js')
+      this.destinationPath('src/resources/' + resourceName + '/' + resourceName + '.controller.js')
     );
 
 
     this.fs.copy(
       this.templatePath('_resource/spec.js'),
-      this.destinationPath('src/api/' + resourceName + '/' + resourceName + '.spec.js'),{
+      this.destinationPath('src/resources/' + resourceName + '/' + resourceName + '.spec.js'),{
         process :  function (input) {
             var output = input.toString('utf-8')
                               .replace('{{RESOURCE_NAME}}', resourceName)  
@@ -68,9 +68,9 @@ module.exports = yeoman.generators.Base.extend({
 
     var routeConfig = {
       file: 'src/config/routes.js',
-      needle: '// YEOMAN INJETC ROUTES BELOW',
+      needle: '// YEOMAN INJECT ROUTES BELOW',
       splicable: [
-        "\tapp.use(mount('/" + resourceName +"', require('../api/" + resourceName + "')));"
+        "\tapp.use(mount('/" + resourceName +"', require('../resources/" + resourceName + "')));"
       ]
     };
     rewriteFile(routeConfig);
