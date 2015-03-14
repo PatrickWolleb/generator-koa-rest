@@ -25,7 +25,6 @@ describe('koa-rest:app', function () {
       '.gitattributes',
       '.gitignore',
       '.jshintrc',
-      '.jshintrc-spec',
       'package.json',
       'src/server.js',
       'src/config/routes.js',

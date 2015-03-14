@@ -1,3 +1,5 @@
 node_modules
 docs
 src/config/environment/local.js
+.DS_Store
+npm-debug.log
