@@ -26,3 +26,4 @@ yo koa-rest:resource cars
 
 Copyright (c) 2015 Patrick Wolleb  
 Licensed under the MIT license.
+
