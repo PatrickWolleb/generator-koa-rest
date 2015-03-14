@@ -1,0 +1,34 @@
+{
+  "name": "generator-koa-rest",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "patrickwolleb/generator-koa-rest",
+  "author": {
+    "name": "Patrick Wolleb",
+    "email": "patrick.wolleb@shmedia.co.uk",
+    "url": "https://github.com/PatrickWolleb"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app",
+    "resource"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.18.9",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
