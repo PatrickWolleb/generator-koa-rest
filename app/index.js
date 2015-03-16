@@ -6,7 +6,7 @@ var yosay = require('yosay');
 module.exports = yeoman.generators.Base.extend({
   initializing: function () {
     this.pkg = require('../package.json');
-  },  
+  },
 
 
   prompting: function () {
@@ -26,6 +26,8 @@ module.exports = yeoman.generators.Base.extend({
       this.portal = answers.portal
       done();
     }.bind(this));
+
+
   },
 
   writing: {
@@ -51,7 +53,7 @@ module.exports = yeoman.generators.Base.extend({
                               .replace('{{API_PORTAL}}', portal);
             return output;
           }
-        } 
+        }
       );
     },
 
