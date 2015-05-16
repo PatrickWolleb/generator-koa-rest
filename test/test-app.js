@@ -20,10 +20,7 @@ describe('koa-rest:app', function () {
 
   it('creates project files', function () {
     assert.file([
-      '.buildignore',
       '.editorconfig',
-      '.gitattributes',
-      '.gitignore',
       '.jshintrc',
       'package.json',
       'src/server.js',

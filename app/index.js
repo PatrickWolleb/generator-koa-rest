@@ -6,7 +6,7 @@ var yosay = require('yosay');
 module.exports = yeoman.generators.Base.extend({
   initializing: function () {
     this.pkg = require('../package.json');
-  },  
+  },
 
 
   prompting: function () {
@@ -51,28 +51,15 @@ module.exports = yeoman.generators.Base.extend({
                               .replace('{{API_PORTAL}}', portal);
             return output;
           }
-        } 
+        }
       );
     },
 
     projectfiles: function () {
-      this.fs.copy(
-        this.templatePath('.buildignore'),
-        this.destinationPath('.buildignore')
-      );
+
       this.fs.copy(
         this.templatePath('.editorconfig'),
         this.destinationPath('.editorconfig')
-      );
-
-      this.fs.copy(
-        this.templatePath('.gitignore'),
-        this.destinationPath('.gitignore')
-      );
-
-      this.fs.copy(
-        this.templatePath('.gitattributes'),
-        this.destinationPath('.gitattributes')
       );
 
       this.fs.copy(
