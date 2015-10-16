@@ -26,6 +26,8 @@ module.exports = yeoman.generators.Base.extend({
       this.portal = answers.portal
       done();
     }.bind(this));
+
+
   },
 
   writing: {
